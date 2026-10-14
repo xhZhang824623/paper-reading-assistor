@@ -1,0 +1,11 @@
+{
+  "name": "paper-reading-v2",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "个人论文精读工作台（纯前端，无需构建）",
+  "scripts": {
+    "start": "python3 serve.py 8080",
+    "test": "node --test tests/"
+  }
+}

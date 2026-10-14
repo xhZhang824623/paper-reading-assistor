@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paper Reading</title>
+<meta name="description" content="个人论文精读工作台：阅读、标注、提问、复盘。">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/reader.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-top">
+      <button class="icon-btn" id="sideToggle" title="收起 / 展开导航" aria-label="收起或展开导航">☰</button>
+      <span class="side-title">Paper Reading</span>
+    </div>
+    <nav>
+      <a href="#/home" data-route="home"><span class="icon">⌂</span><span>首页</span></a>
+      <a href="#/library" data-route="library"><span class="icon">▤</span><span>论文库</span><em id="paperCount">0</em></a>
+      <a href="#/knowledge" data-route="knowledge"><span class="icon">✦</span><span>知识</span><em id="dueCount">0</em></a>
+    </nav>
+    <div class="side-section">
+      <small>最近阅读</small>
+      <div id="recentPapers"></div>
+    </div>
+    <div class="side-bottom">
+      <button class="btn btn-primary" id="importBtn"><span class="icon">＋</span><span>导入 PDF</span></button>
+      <a href="#/settings" data-route="settings"><span class="icon">⚙</span><span>设置</span></a>
+      <div id="saveStatus"></div>
+    </div>
+  </aside>
+  <main id="view" tabindex="-1"></main>
+</div>
+<input type="file" id="fileInput" accept="application/pdf,.pdf" multiple hidden>
+<div id="selToolbar" hidden>
+  <button data-act="translate">翻译<kbd>T</kbd></button>
+  <button data-act="explain">解释<kbd>E</kbd></button>
+  <button data-act="ask">提问<kbd>Q</kbd></button>
+  <span class="sep"></span>
+  <button data-act="highlight">高亮<kbd>H</kbd></button>
+  <button data-act="note">笔记<kbd>B</kbd></button>
+  <button data-act="english">存表达</button>
+</div>
+<div id="popover" hidden></div>
+<dialog id="modal"></dialog>
+<div id="toasts"></div>
+<div id="dropOverlay" hidden>松开以导入 PDF</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 828 >>
+stream
+BT /F1 12 Tf 72 740 Td 16 TL
+(Deep Residual Learning for Image Segmentation) Tj T*
+() Tj T*
+(Abstract) Tj T*
+(Medical image segmentation models often perform well on data from the) Tj T*
+(same distribution as their training set. However, their performance may) Tj T*
+(degrade when deployed in a different clinical environment. Domain shift) Tj T*
+(refers to a change in the data distribution between source and target) Tj T*
+(domains. In this paper we study this effect on three public datasets.) Tj T*
+() Tj T*
+(1. Introduction) Tj T*
+(Consider a model trained on images acquired at Hospital A. Images from) Tj T*
+(Hospital B may differ in scanner settings, patient populations, or) Tj T*
+(acquisition protocols. These differences can change image appearance) Tj T*
+(without changing the underlying segmentation task.) Tj T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 740 >>
+stream
+BT /F1 12 Tf 72 740 Td 16 TL
+(2. Method) Tj T*
+(We adopt a U-Net backbone with residual blocks and train with Dice loss.) Tj T*
+(Test-time augmentation is applied to estimate predictive uncertainty.) Tj T*
+(Let x denote the input image and y the segmentation mask. We minimize) Tj T*
+(L = 1 - 2|P ? G| / \(|P| + |G|\) over the training set.) Tj T*
+() Tj T*
+(3. Experiments) Tj T*
+(To assess generalization, we evaluate the model on independent target) Tj T*
+(domain data and compare its performance with a source domain baseline.) Tj T*
+(A change in image appearance alone does not tell us how much the) Tj T*
+(segmentation performance will decrease; this requires experimental) Tj T*
+(evidence. Results are summarized in Table 1.) Tj T*
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000350 00000 n 
+0000001229 00000 n 
+0000001355 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2146
+%%EOF

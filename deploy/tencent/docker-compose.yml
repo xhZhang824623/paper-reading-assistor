@@ -1,0 +1,19 @@
+services:
+  paperreading:
+    image: nginx:1.27
+    container_name: nginxPaperReading
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8443:443"   # 未备案域名在 80/443 会被腾讯云拦截，对外用 8443
+    volumes:
+      - ./dist:/srv/paper:ro
+      - ./nginx:/etc/nginx/conf.d:ro   # 挂目录而不是单个文件，否则 rsync 替换文件后容器看不到新内容
+      - ./acme:/srv/acme:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost/health"]
+      interval: 60s
+      timeout: 5s
+      retries: 3
